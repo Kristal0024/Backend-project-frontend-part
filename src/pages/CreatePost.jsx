@@ -1,12 +1,15 @@
 import React from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import {BACKEND_URL} from '../config'
+
+
 const CreatePost = () => {
   const navigate=useNavigate()
   const handleSubmit=async(e)=>{
     e.preventDefault()
     const formData=new FormData(e.target)
-    axios.post("http://localhost:3000/create-post",formData).then((res)=>{
+    axios.post(`${BACKEND_URL}/create-post`,formData).then((res)=>{
      navigate("/feed")
     })
     .catch((err)=>{
