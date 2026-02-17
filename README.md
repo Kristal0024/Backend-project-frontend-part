@@ -1,16 +1,63 @@
-# React + Vite
+[Live Demo](https://kristal0024.github.io/Backend-project-frontend-part/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is the frontend part of a social post application built with React.js.
+It allows users to:
 
-## React Compiler
+Create posts with an image and caption
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+View all posts in a feed
 
-## Expanding the ESLint configuration
+Delete posts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The frontend communicates with a live backend hosted on Renderer
+.
+
+Technologies Used
+
+React.js – frontend framework
+
+React Router – for navigation between pages (Home, Create Post, Feed)
+
+Axios – for making HTTP requests to the backend
+
+React Icons – for UI icons
+
+CSS – basic styling
+
+Features
+
+Create Post
+
+Upload an image
+
+Add a caption
+
+Submit to backend via axios POST request
+
+Redirect to feed after successful submission
+
+Feed Page
+
+Displays all posts fetched from the backend via axios GET request
+
+Delete posts with a click on the cross icon (RxCross2)
+
+Updates the feed immediately without page reload
+
+Live Backend Integration
+
+All API requests point to the live backend URL via a config file (BACKEND_URL)
+
+Supports HTTPS for GitHub Pages deployment
+
+Project Structure
+src/
+ ├─ pages/
+ │   ├─ CreatePost.jsx
+ │   ├─ Feed.jsx
+ │   └─ Home.jsx
+ ├─ config.js
+ └─ App.jsx
